@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace EmprestimoLivros.WindowsForms
+namespace EmprestimoLivros.WindowsForms.View
 {
-    public partial class Form1 : Form
+    public partial class FrmInterfaceMain : Form
     {
-        public Form1()
+        public FrmInterfaceMain()
         {
             InitializeComponent();
         }
