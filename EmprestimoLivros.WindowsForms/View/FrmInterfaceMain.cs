@@ -16,5 +16,18 @@ namespace EmprestimoLivros.WindowsForms.View
         {
             InitializeComponent();
         }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using(FrmClienteMain frmClienteMain = new FrmClienteMain())
+            {
+                frmClienteMain.ShowDialog();
+            }
+        }
     }
 }
