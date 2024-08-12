@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmprestimoLivro.Application
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmprestimoLivro.Domain", "EmprestimoLivro.Domain\EmprestimoLivro.Domain.csproj", "{61D3584F-8DFB-407F-BEFD-0EAB5D7CC7A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmprestimoLivro.Infrastructure", "EmprestimoLivro.Infrastructure\EmprestimoLivro.Infrastructure.csproj", "{4A5D1D20-91DE-4E0B-895B-6632A25113AF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmprestimoLivro.Infrastructure", "EmprestimoLivro.Infrastructure\EmprestimoLivro.Infrastructure.csproj", "{E83C8BAE-755C-45BA-8383-EF2EEFA71C31}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,10 +37,10 @@ Global
 		{61D3584F-8DFB-407F-BEFD-0EAB5D7CC7A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61D3584F-8DFB-407F-BEFD-0EAB5D7CC7A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61D3584F-8DFB-407F-BEFD-0EAB5D7CC7A7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4A5D1D20-91DE-4E0B-895B-6632A25113AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4A5D1D20-91DE-4E0B-895B-6632A25113AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4A5D1D20-91DE-4E0B-895B-6632A25113AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4A5D1D20-91DE-4E0B-895B-6632A25113AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E83C8BAE-755C-45BA-8383-EF2EEFA71C31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E83C8BAE-755C-45BA-8383-EF2EEFA71C31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E83C8BAE-755C-45BA-8383-EF2EEFA71C31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E83C8BAE-755C-45BA-8383-EF2EEFA71C31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -49,7 +49,7 @@ Global
 		{4676DC49-2F27-475D-8852-75600070F825} = {589D168B-0785-4949-88B2-0577B686ED9A}
 		{765E7BBF-A18B-4A69-A487-7E606ADFFDC2} = {5FF647BD-F252-4E97-A599-324BCD021181}
 		{61D3584F-8DFB-407F-BEFD-0EAB5D7CC7A7} = {F7404A78-6B49-46A5-B165-63FB8B5EA591}
-		{4A5D1D20-91DE-4E0B-895B-6632A25113AF} = {7499E926-AF4B-4E52-93C8-C46B803B5F28}
+		{E83C8BAE-755C-45BA-8383-EF2EEFA71C31} = {7499E926-AF4B-4E52-93C8-C46B803B5F28}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {947E0046-C63F-45DD-9906-3817BDD7CF60}

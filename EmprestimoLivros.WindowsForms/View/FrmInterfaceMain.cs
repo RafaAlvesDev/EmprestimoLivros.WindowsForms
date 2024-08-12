@@ -1,20 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using EmprestimoLivro.Application.Services;
+using System;
 using System.Windows.Forms;
 
 namespace EmprestimoLivros.WindowsForms.View
 {
     public partial class FrmInterfaceMain : Form
     {
-        public FrmInterfaceMain()
+        private readonly ClienteService _clienteService;
+
+        public FrmInterfaceMain(ClienteService clienteService)
         {
             InitializeComponent();
+            _clienteService = clienteService;
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
@@ -24,7 +21,7 @@ namespace EmprestimoLivros.WindowsForms.View
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using(FrmClienteMain frmClienteMain = new FrmClienteMain())
+            using(FrmClienteMain frmClienteMain = new FrmClienteMain(_clienteService))
             {
                 frmClienteMain.ShowDialog();
             }

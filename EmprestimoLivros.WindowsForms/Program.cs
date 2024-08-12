@@ -1,4 +1,8 @@
-﻿using EmprestimoLivros.WindowsForms.View;
+﻿using EmprestimoLivro.Application.Services;
+using EmprestimoLivro.Application.UseCases;
+using EmprestimoLivro.Domain.Interface.Repository;
+using EmprestimoLivro.Infrastructure.Repositorie;
+using EmprestimoLivros.WindowsForms.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,9 +19,13 @@ namespace EmprestimoLivros.WindowsForms
         [STAThread]
         static void Main()
         {
+            IClienteRepository _clienteRepository = new ClienteRepositorie();
+            ClienteUseCase _clienteUseCase = new ClienteUseCase(_clienteRepository);
+            ClienteService _clienteService = new ClienteService(_clienteUseCase);
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmInterfaceMain());
+            Application.Run(new FrmInterfaceMain(_clienteService));
         }
     }
 }

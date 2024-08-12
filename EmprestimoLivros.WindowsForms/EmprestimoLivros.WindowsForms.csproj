@@ -54,6 +54,12 @@
     <Compile Include="View\FrmClienteMain.Designer.cs">
       <DependentUpon>FrmClienteMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FrmClienteScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmClienteScreen.Designer.cs">
+      <DependentUpon>FrmClienteScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FrmInterfaceMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,9 @@
     <EmbeddedResource Include="View\FrmClienteMain.resx">
       <DependentUpon>FrmClienteMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmClienteScreen.resx">
+      <DependentUpon>FrmClienteScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FrmInterfaceMain.resx">
       <DependentUpon>FrmInterfaceMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -87,6 +96,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EmprestimoLivro.Application\EmprestimoLivro.Application.csproj">
+      <Project>{765e7bbf-a18b-4a69-a487-7e606adffdc2}</Project>
+      <Name>EmprestimoLivro.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EmprestimoLivro.Domain\EmprestimoLivro.Domain.csproj">
+      <Project>{61d3584f-8dfb-407f-befd-0eab5d7cc7a7}</Project>
+      <Name>EmprestimoLivro.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EmprestimoLivro.Infrastructure\EmprestimoLivro.Infrastructure.csproj">
+      <Project>{E83C8BAE-755C-45BA-8383-EF2EEFA71C31}</Project>
+      <Name>EmprestimoLivro.Infrastructure</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
