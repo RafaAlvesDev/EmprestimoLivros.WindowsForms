@@ -45,7 +45,7 @@
     <Compile Include="Entities\Cliente.cs" />
     <Compile Include="Entities\Livro.cs" />
     <Compile Include="Entities\LivroClienteEmprestimo.cs" />
-    <Compile Include="Interface\Conection\IConection.cs" />
+    <Compile Include="Interface\Connection\IConnection.cs" />
     <Compile Include="Interface\Repository\IClienteRepository.cs" />
     <Compile Include="Interface\Repository\IGenericRepository.cs" />
     <Compile Include="Interface\Repository\ILivroClienteEmprestimoRepository.cs" />

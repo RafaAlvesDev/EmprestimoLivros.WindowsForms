@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace EmprestimoLivro.Infrastructure.Data
 {
-    public abstract class DAOConection<T> : IConection<T> 
+    public abstract class DAOConection<T> : IConnection<T> 
     {
         protected abstract List<T> GetObject(SqlDataReader objDataReader);
         private readonly string _connectionString;

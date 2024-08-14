@@ -1,7 +1,6 @@
 ﻿using EmprestimoLivro.Application.Services;
 using EmprestimoLivro.Domain.Entiteis;
 using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace EmprestimoLivros.WindowsForms.View
@@ -64,6 +63,8 @@ namespace EmprestimoLivros.WindowsForms.View
             {
                 frmClienteScreen.ShowDialog();
             }
+
+            Pesquisar();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -79,6 +80,8 @@ namespace EmprestimoLivros.WindowsForms.View
             {
                 frmClienteScreen.ShowDialog();
             }
+
+            Pesquisar();
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
@@ -102,7 +105,7 @@ namespace EmprestimoLivros.WindowsForms.View
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Falha ao excluir cliente.\r\nMotivo: " + ex.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Falha ao excluir cliente.\r\nMotivo: " + ex.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

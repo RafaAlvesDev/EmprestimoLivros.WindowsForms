@@ -4,7 +4,7 @@ using System.Data;
 
 namespace EmprestimoLivro.Domain.Interface.Conection
 {
-    public interface IConection<T>
+    public interface IConnection<T>
     {
         void ClearParameters();
         void AddParameters(string parameterName, object valueparameters);
