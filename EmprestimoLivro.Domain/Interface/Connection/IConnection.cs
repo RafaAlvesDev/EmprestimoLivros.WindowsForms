@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 
-namespace EmprestimoLivro.Domain.Interface.Conection
+namespace EmprestimoLivro.Domain.Interface.Connection
 {
     public interface IConnection<T>
     {

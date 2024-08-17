@@ -44,7 +44,9 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ClienteService.cs" />
+    <Compile Include="Services\LivroService.cs" />
     <Compile Include="UseCases\ClienteUseCase.cs" />
+    <Compile Include="UseCases\LivroUseCase.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup />

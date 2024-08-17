@@ -1,4 +1,4 @@
-﻿using EmprestimoLivro.Domain.Interface.Conection;
+﻿using EmprestimoLivro.Domain.Interface.Connection;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -66,7 +66,6 @@ namespace EmprestimoLivro.Infrastructure.Data
                             command.ExecuteNonQuery();
                             transaction.Commit();
                         }
-
                     }
                     catch (Exception)
                     {

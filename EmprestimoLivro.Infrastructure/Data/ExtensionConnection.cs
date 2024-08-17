@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
 
@@ -21,7 +22,7 @@ namespace EmprestimoLivro.Infrastructure.Data
             return string.Empty;
         }
 
-        public static string GetReaderDate(this SqlDataReader objDataReader, string colunm)
+        public static DateTime? GetReaderDateTime(this SqlDataReader objDataReader, string colunm)
         {
             DataTable table = objDataReader.GetSchemaTable();
             int index = objDataReader.GetOrdinal(colunm);
@@ -30,11 +31,11 @@ namespace EmprestimoLivro.Infrastructure.Data
             {
                 if (row["ColumnName"].ToString().Equals(colunm))
                 {
-                    return objDataReader.IsDBNull(index) ? "" : objDataReader.GetDateTime(index).ToShortDateString();
+                    return objDataReader.IsDBNull(index) ? (DateTime?)null : objDataReader.GetDateTime(index);
                 }
             }
 
-            return string.Empty;
+            return null;
         }
 
         public static int GetReaderInt(this SqlDataReader objDataReader, string colunm)

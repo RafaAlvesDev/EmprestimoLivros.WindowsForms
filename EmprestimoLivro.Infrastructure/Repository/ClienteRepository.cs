@@ -6,9 +6,9 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace EmprestimoLivro.Infrastructure.Repositorie
+namespace EmprestimoLivro.Infrastructure.Repository
 {
-    public class ClienteRepositorie : DAOConection<Cliente>, IClienteRepository
+    public class ClienteRepository : DAOConection<Cliente>, IClienteRepository
     {
         public void Atualizar(Cliente cliente)
         {
