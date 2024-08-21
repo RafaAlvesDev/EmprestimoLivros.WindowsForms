@@ -44,11 +44,11 @@
   <ItemGroup>
     <Compile Include="Entities\Cliente.cs" />
     <Compile Include="Entities\Livro.cs" />
-    <Compile Include="Entities\LivroClienteEmprestimo.cs" />
+    <Compile Include="Entities\Livro_Cliente_Emprestimo.cs" />
     <Compile Include="Interface\Connection\IConnection.cs" />
     <Compile Include="Interface\Repository\IClienteRepository.cs" />
     <Compile Include="Interface\Repository\IGenericRepository.cs" />
-    <Compile Include="Interface\Repository\ILivroClienteEmprestimoRepository.cs" />
+    <Compile Include="Interface\Repository\ILivro_Cliente_EmprestimoRepository.cs" />
     <Compile Include="Interface\Repository\ILivroRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />

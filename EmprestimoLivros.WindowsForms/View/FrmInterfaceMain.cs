@@ -8,12 +8,14 @@ namespace EmprestimoLivros.WindowsForms.View
     {
         private readonly ClienteService _clienteService;
         private readonly LivroService _livroService;
+        private readonly Livro_Cliente_EmprestimoService _livro_Cliente_EmprestimoService;
 
-        public FrmInterfaceMain(ClienteService clienteService, LivroService livroService)
+        public FrmInterfaceMain(ClienteService clienteService, LivroService livroService, Livro_Cliente_EmprestimoService livro_Cliente_EmprestimoService)
         {
             InitializeComponent();
             _clienteService = clienteService;
             _livroService = livroService;
+            _livro_Cliente_EmprestimoService = livro_Cliente_EmprestimoService;
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
@@ -39,7 +41,10 @@ namespace EmprestimoLivros.WindowsForms.View
 
         private void emprestimoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            using (FrmEmprestimoMain frmEmprestimoMain = new FrmEmprestimoMain(_livro_Cliente_EmprestimoService, _clienteService, _livroService))
+            {
+                frmEmprestimoMain.ShowDialog();
+            }
         }
     }
 }

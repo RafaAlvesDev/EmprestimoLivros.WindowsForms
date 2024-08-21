@@ -159,7 +159,6 @@ namespace EmprestimoLivro.Infrastructure.Data
                             {
                                 listObject = GetObject(objDataReader);
                             }
-                            connection.Close();
                         }
 
                         command.ExecuteNonQuery();
@@ -215,8 +214,6 @@ namespace EmprestimoLivro.Infrastructure.Data
                             {
                                 listObject = GetObject(objDataReader);
                             }
-
-                            connection.Close();
                         }
                     }
                 }

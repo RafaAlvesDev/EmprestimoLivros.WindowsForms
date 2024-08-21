@@ -39,7 +39,7 @@ namespace EmprestimoLivro.Infrastructure.Repository
                     "\r\n WHERE Id = @Id";
 
                 ClearParameters();
-                AddParameters("@id", id + "%");
+                AddParameters("@id", id);
                 return GetObject(CommandType.Text, strSQL);
             }
             catch (Exception)

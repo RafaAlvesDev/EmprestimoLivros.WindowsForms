@@ -2,7 +2,7 @@
 
 namespace EmprestimoLivro.Domain.Interface.Repository
 {
-    public interface ILivroClienteEmprestimoRepository : IGenericRepository<LivroClienteEmprestimo>
+    public interface ILivro_Cliente_EmprestimoRepository : IGenericRepository<Livro_Cliente_Emprestimo>
     {
     }
 }

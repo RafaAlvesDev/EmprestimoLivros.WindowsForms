@@ -18,27 +18,8 @@ namespace EmprestimoLivro.Application.UseCases
         {
             try
             {
-                if (cliente is Cliente == false || cliente.Id.Equals(0))
-                {
-                    throw new Exception("Cliente não encontrado para atualizar");
-                }
-
-                if (string.IsNullOrEmpty(cliente.CliCpf))
-                {
-                    throw new Exception("Informe o CPF do cliente.");
-                }
-
-                if (cliente.CliCpf.Length < 14)
-                {
-                    throw new Exception("CPF do cliente inválido.");
-                }
-
-                if (string.IsNullOrEmpty(cliente.CliNome) || cliente.CliNome.Length < 3)
-                {
-                    throw new Exception("Informe o nome do cliente.");
-                }
-
-                _clienteRepository.Atualizar(cliente);  
+                ValidateObject(cliente);
+                _clienteRepository.Atualizar(cliente);
             }
             catch (Exception)
             {
@@ -84,21 +65,7 @@ namespace EmprestimoLivro.Application.UseCases
         {
             try
             {
-                if (cliente is Cliente == false)
-                {
-                    throw new Exception("Cliente não informado para inserir");
-                }
-
-                if (string.IsNullOrEmpty(cliente.CliCpf) || cliente.CliCpf.Length < 14)
-                {
-                    throw new Exception("Informe o CPF do cliente.");
-                }
-
-                if (string.IsNullOrEmpty(cliente.CliNome) || cliente.CliNome.Length < 3)
-                {
-                    throw new Exception("Informe o nome do cliente.");
-                }
-
+                ValidateObject(cliente);
                 _clienteRepository.Inserir(cliente);
             }
             catch (Exception)
@@ -116,6 +83,40 @@ namespace EmprestimoLivro.Application.UseCases
             catch (Exception)
             {
                 throw;
+            }
+        }
+
+        private void ValidateObject(Cliente cliente)
+        {
+            string msg = null;
+
+            if (cliente is Cliente == false)
+            {
+                msg += "\r\n - Cliente não informado para inserir";
+            }
+
+            if (string.IsNullOrEmpty(cliente.CliCpf))
+            {
+                msg += "\r\n - Informe o CPF do cliente.";
+            }
+
+            if (string.IsNullOrEmpty(cliente.CliNome) || cliente.CliNome.Length < 3)
+            {
+                msg += "\r\n - Informe o nome do cliente.";
+            }
+            if (cliente is Cliente == false || cliente.Id.Equals(0))
+            {
+                msg += "\r\n - Cliente não encontrado para atualizar";
+            }
+
+            if (cliente.CliCpf.Length < 14)
+            {
+                msg += "\r\n - CPF do cliente inválido.";
+            }
+
+            if (msg != null)
+            {
+                throw new Exception("Informações inválidas, verifique:" + msg);
             }
         }
     }

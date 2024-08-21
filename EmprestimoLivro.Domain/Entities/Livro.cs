@@ -17,6 +17,6 @@ namespace EmprestimoLivro.Domain.Entiteis
         public DateTime? LivroAnoPublicacao { get; set; }
         public string LivroEdicao { get; set; }
 
-        public virtual ICollection<LivroClienteEmprestimo> LivroClienteEmprestimos { get; set; } = new List<LivroClienteEmprestimo>();
+        public virtual ICollection<Livro_Cliente_Emprestimo> LivroClienteEmprestimos { get; set; } = new List<Livro_Cliente_Emprestimo>();
     }
 }

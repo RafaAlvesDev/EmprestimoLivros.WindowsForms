@@ -24,9 +24,13 @@ namespace EmprestimoLivros.WindowsForms
             LivroUseCase _livroUseCase = new LivroUseCase(_livroRepository);
             LivroService _livroService = new LivroService(_livroUseCase);
 
+            ILivro_Cliente_EmprestimoRepository _livro_Cliente_EmprestimoRepository = new Livro_Cliente_EmprestimoRepository();
+            Livro_Cliente_EmprestimoUseCase _livro_Cliente_EmprestimoUseCase = new Livro_Cliente_EmprestimoUseCase(_livro_Cliente_EmprestimoRepository);
+            Livro_Cliente_EmprestimoService _livro_Cliente_EmprestimoService = new Livro_Cliente_EmprestimoService(_livro_Cliente_EmprestimoUseCase);
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmInterfaceMain(_clienteService, _livroService));
+            Application.Run(new FrmInterfaceMain(_clienteService, _livroService, _livro_Cliente_EmprestimoService));
         }
     }
 }

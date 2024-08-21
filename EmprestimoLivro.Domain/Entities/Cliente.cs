@@ -19,6 +19,6 @@ namespace EmprestimoLivro.Domain.Entiteis
         public string CliTelefoneCelular { get; set; }
         public string CliTelefoneFixo { get; set; }
         
-        public virtual ICollection<LivroClienteEmprestimo> LivroClienteEmprestimos { get; set; } = new List<LivroClienteEmprestimo>();
+        public virtual ICollection<Livro_Cliente_Emprestimo> LivroClienteEmprestimos { get; set; } = new List<Livro_Cliente_Emprestimo>();
     }
 }

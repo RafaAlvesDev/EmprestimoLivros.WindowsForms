@@ -70,7 +70,6 @@ namespace EmprestimoLivro.Application.UseCases
         {
             try
             {
-
                 return _livroRepository.Pesquisar(pesquisar);
             }
             catch (Exception)

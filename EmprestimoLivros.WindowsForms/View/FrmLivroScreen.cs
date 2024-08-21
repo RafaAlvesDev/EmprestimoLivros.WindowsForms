@@ -70,10 +70,5 @@ namespace EmprestimoLivros.WindowsForms.View
                 MessageBox.Show("Falha ao salvar livro.\r\nMotivo: " + ex.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
     }
 }
