@@ -1,6 +1,7 @@
 ﻿using EmprestimoLivro.Application.Services;
 using EmprestimoLivro.Application.UseCases;
 using EmprestimoLivro.Domain.Interface.Repository;
+using EmprestimoLivro.Infrastructure.Data;
 using EmprestimoLivro.Infrastructure.Repository;
 using EmprestimoLivros.WindowsForms.View;
 using System;
@@ -16,6 +17,8 @@ namespace EmprestimoLivros.WindowsForms
         [STAThread]
         static void Main()
         {
+            new DatabaseConfig().CreateTables();
+
             IClienteRepository _clienteRepository = new ClienteRepository();
             ClienteUseCase _clienteUseCase = new ClienteUseCase(_clienteRepository);
             ClienteService _clienteService = new ClienteService(_clienteUseCase);
